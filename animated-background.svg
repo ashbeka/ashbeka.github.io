@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 800">
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="gradientBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0f2c" />
+      <stop offset="100%" stop-color="#292e5a" />
+    </linearGradient>
+    
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4568dc">
+        <animate attributeName="stop-color" values="#4568dc; #6989fe; #4568dc" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#6989fe">
+        <animate attributeName="stop-color" values="#6989fe; #4568dc; #6989fe" dur="10s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b06ab3">
+        <animate attributeName="stop-color" values="#b06ab3; #d68fe3; #b06ab3" dur="15s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#d68fe3">
+        <animate attributeName="stop-color" values="#d68fe3; #b06ab3; #d68fe3" dur="15s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="wave3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a2980">
+        <animate attributeName="stop-color" values="#1a2980; #26d0ce; #1a2980" dur="20s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#26d0ce">
+        <animate attributeName="stop-color" values="#26d0ce; #1a2980; #26d0ce" dur="20s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <!-- Add some particles -->
+    <radialGradient id="particle" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="white" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#gradientBg)" />
+  
+  <!-- Stars -->
+  <g>
+    <circle cx="200" cy="100" r="1" fill="white" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="500" cy="50" r="1.5" fill="white" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="800" cy="150" r="1" fill="white" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1200" cy="80" r="1.2" fill="white" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="200" r="1" fill="white" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="250" r="1.5" fill="white" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1100" cy="180" r="1" fill="white" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="100" cy="300" r="1.2" fill="white" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Animated Wave 1 -->
+  <path d="M0,550 C400,450 800,600 1440,500" fill="none" stroke="url(#wave1)" stroke-width="100" opacity="0.3">
+    <animate attributeName="d" 
+             values="M0,550 C400,450 800,600 1440,500;
+                     M0,550 C400,650 800,500 1440,600;
+                     M0,550 C400,450 800,600 1440,500" 
+             dur="20s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Animated Wave 2 -->
+  <path d="M0,600 C300,550 900,650 1440,580" fill="none" stroke="url(#wave2)" stroke-width="120" opacity="0.2">
+    <animate attributeName="d" 
+             values="M0,600 C300,550 900,650 1440,580;
+                     M0,580 C300,650 900,550 1440,620;
+                     M0,600 C300,550 900,650 1440,580" 
+             dur="25s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Animated Wave 3 -->
+  <path d="M0,680 C400,630 800,700 1440,650" fill="none" stroke="url(#wave3)" stroke-width="150" opacity="0.15">
+    <animate attributeName="d" 
+             values="M0,680 C400,630 800,700 1440,650;
+                     M0,650 C400,700 800,630 1440,680;
+                     M0,680 C400,630 800,700 1440,650" 
+             dur="30s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Floating Particles -->
+  <circle cx="300" cy="400" r="3" fill="url(#particle)">
+    <animate attributeName="cy" values="400;360;400" dur="15s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="300;320;300" dur="15s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="800" cy="300" r="4" fill="url(#particle)">
+    <animate attributeName="cy" values="300;270;300" dur="20s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="800;830;800" dur="20s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="1200" cy="350" r="2.5" fill="url(#particle)">
+    <animate attributeName="cy" values="350;330;350" dur="18s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="1200;1180;1200" dur="18s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="500" cy="450" r="3.5" fill="url(#particle)">
+    <animate attributeName="cy" values="450;420;450" dur="22s" repeatCount="indefinite" />
+    <animate attributeName="cx" values="500;530;500" dur="22s" repeatCount="indefinite" />
+  </circle>
+</svg>
